@@ -1,0 +1,93 @@
+\documentclass[100pt]{article}
+\usepackage{booktabs}
+%\usepackage{../style/booktabs}
+\usepackage[table,xcdraw]{xcolor}
+%\usepackage[table,xcdraw]{style/xcolor}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{multido}
+\usepackage[scaled=2.5]{helvet}
+%\usepackage{style/mdframed}
+%\usepackage[pdftex,active,tightpage]{style/preview}
+\usepackage{pgfgantt}
+\usepackage[paperwidth=21.9in, paperheight=12.5in]{geometry}
+
+
+\newcommand{\colorSep}{\cellcolor[HTML]{330001}}
+\newcommand{\colorDeepSmall}{\cellcolor[HTML]{006B24}}
+\newcommand{\colorDeep}{\cellcolor[HTML]{007A29}}
+\newcommand{\colorLight}{\cellcolor[HTML]{85ADFF}}
+\newcommand{\colorObjmillm}{\cellcolor[HTML]{4C3364}}
+\newcommand{\colorObjetoe}{\cellcolor[HTML]{999966}}
+\newcommand{\colorObjqos}{\cellcolor[HTML]{B24700}}
+\newcommand{\colorObjperf}{\cellcolor[HTML]{B2B2B7}}
+%\newcommand{\nseparator}[1]{\multido{}{#1}{ A }}
+\newcommand{\colseparator}{&}
+\newcommand{\bigcolseparator}{&&&&}
+%\renewenvironment{table}[1]{\fontfamily{phv}\selectfont}{×}
+\newenvironment{mytable}{\begin{table}[h] \fontfamily{phv}\selectfont }{\end{table}}
+                                                                        
+
+%\newcommand{\colorSep}{\hspace {-.2cm}\tikz \node[rounded corners=3pt, draw, fill={rgb:red,69;green,5;blue,13}, minimum width=0.55*\textwidth,minimum height=3mm]{ };}
+%\newcommand{\colorLight}{\hspace{-5pt}\tikz \node[rounded corners=3pt, draw, fill={rgb:red,0;green,50;blue,36}, minimum width=0.07*\textwidth,minimum height=3mm]{ };}  % Forest Green
+%\newcommand{\colorDeep} {\tikz \node[rounded corners=3pt, draw, fill={rgb:red,100;green,53;blue,110}, minimum width=0.07*\textwidth,minimum height=3mm,]{ };}		% Magenta
+%\newcommand{\colorDeepSmall}{\tikz \node[rounded corners=3pt, draw, fill={rgb:red,100;green,53;blue,110}, minimum width=0.035*\textwidth,minimum height=3mm,]{ };}
+
+\newcommand{\joinTwoCol}[1] {\multicolumn{2}{c}{ #1}}
+\newcommand{\category}[1]{{\multicolumn{1}{>{\bfseries}c}{ #1}}}
+%\newcommand{\subcategory}[1]{\huge}
+
+
+\begin{document}
+\thispagestyle{empty}
+
+ \newgeometry{top=0.1cm,left=0.1cm,right=0.1cm,bottom=0.1cm}
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{mytable}
+%\fontfamily{phv}\selectfont
+%\Large
+\begin{center}
+\begin{tabular}{@{}|c >{\bfseries}l|p{2.5mm}p{2.5mm}p{2.5mm}p{2.5mm}|p{2.5mm}p{2.5mm}p{2.5mm}p{2.5mm}|p{2.5mm}p{2.5mm}p{2.5mm}p{2.5mm}|p{2.5mm}p{2.5mm}p{2.5mm}p{2.5mm}|@{}}
+\hline
+\multicolumn{1}{|c}{}                     & \multicolumn{1}{>{\bfseries}c|}{}               & \multicolumn{4}{>{\bfseries}c}{2015}            & \multicolumn{4}{|>{\bfseries}c|}{2016}         &     \multicolumn{4}{|>{\bfseries}c|}{2017}\\ \hline
+\multicolumn{1}{|c}{}                     & \multicolumn{1}{l|}{}               & \multicolumn{1}{>{\bfseries}c|}{1-3} & \multicolumn{1}{>{\bfseries}c|}{4-6} & \multicolumn{1}{>{\bfseries}c|}{7-9} & \multicolumn{1}{>{\bfseries}c|}{10-12} & \multicolumn{1}{>{\bfseries}c|}{1-3} & \multicolumn{1}{>{\bfseries}c|}{4-6} & \multicolumn{1}{>{\bfseries}c|}{7-9} & \multicolumn{1}{>{\bfseries}c|}{10-12}  & \multicolumn{1}{>{\bfseries}c|}{1-3} & \multicolumn{1}{>{\bfseries}c|}{4-6} & \multicolumn{1}{>{\bfseries}c|}{7-9} & \multicolumn{1}{>{\bfseries}c|}{10-12}  \\ \hline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\multicolumn{1}{|c|}{\textbf{OBJECTIVE 1:}}                          \colseparator \multicolumn{1}{>{\bfseries}l|}{\begin{tabular}[c]{@{}l@{}}Literature\\ Survey\end{tabular}}     \colseparator  \joinTwoCol{\colorDeepSmall} \colseparator\colseparator \bigcolseparator\bigcolseparator         \\ \hline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{c}Design of d-SDN architecture \\ for controller coordination\end{tabular}}}     \colseparator \multicolumn{1}{>{\bfseries}l|}{\begin{tabular}[c]{@{}l@{}}Design of \\ d-SDN controller\end{tabular}}  \colseparator\colseparator \joinTwoCol{\colorDeep}          \colseparator\bigcolseparator\bigcolseparator   \\ \hline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\multicolumn{1}{|c|}{\textbf{}}   & \multicolumn{1}{>{\bfseries}l|}{\begin{tabular}[c]{@{}l@{}}Theoretical Modeling\\ of d-SDN controller\end{tabular}} \colseparator\colseparator\colseparator\colseparator   \multicolumn{1}{c}{ \colorDeep}         \bigcolseparator\bigcolseparator  \\ \hline %\nseparator{4}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\multicolumn{1}{|c|}{\textbf{}}   & \multicolumn{1}{>{\bfseries}l|}{\begin{tabular}[c]{@{}l@{}}Testbed and \\ Emulation \end{tabular}} &&&& \joinTwoCol{\ \colorDeep}          & & & & & & & & & &  \\ \hline %\nseparator{4} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \multicolumn{14}{|c|}{\colorSep}                                                      \\ \hline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\multicolumn{1}{|c|}{\textbf{OBJECTIVE 2:}}                         				& \multicolumn{1}{>{\bfseries}l|}{\begin{tabular}[c]{@{}l@{}}Problem \\ Identification\end{tabular}}						 \colseparator \bigcolseparator\colseparator  						\joinTwoCol{\colorObjmillm}    		 							\colseparator\bigcolseparator          \\ \hline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{c} \end{tabular}}}      	&  \multicolumn{1}{>{\bfseries}l|}{\begin{tabular}[c]{@{}l@{}}Theoretical \\Modeling \end{tabular}}   					 \colseparator\bigcolseparator\colseparator\colseparator  	\joinTwoCol{\colorObjmillm}           							 \bigcolseparator         \\\hline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{c} SDN application for \\ multi-path transport protocol \end{tabular}}}      &  \multicolumn{1}{>{\bfseries}l|}{\begin{tabular}[c]{@{}l@{}}Design of \\Control plane\end{tabular}}     \colseparator \bigcolseparator\bigcolseparator   \joinTwoCol{\colorObjmillm}             \colseparator \colseparator          \\\hline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{c}  \end{tabular}}}      	&  \multicolumn{1}{>{\bfseries}l|}{\begin{tabular}[c]{@{}l@{}}Testbed and \\Emulation \end{tabular}}    \colseparator \bigcolseparator\bigcolseparator\colseparator  \joinTwoCol{\colorObjmillm}             \colseparator          \\\hline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\multicolumn{14}{|c|}{\colorSep}                                                         \\ \hline
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\multicolumn{1}{|c|}{\textbf{OBJECTIVE 3:}}                         & \multicolumn{1}{>{\bfseries}l|}{\begin{tabular}[c]{@{}l@{}}Problem \\ Formulation\end{tabular}}  &  &  &      \joinTwoCol{\colorLight} &     &  &  &     \\ \hline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{c}Hierarchical \\ control plane\end{tabular}}}      &   \multicolumn{1}{>{\bfseries}l|}{\begin{tabular}[c]{@{}l@{}}Solution \\ Approach\end{tabular}}    &  &  &     \joinTwoCol{\colorLight} &    &  &      \\ \hline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\multicolumn{1}{|c|}{} 	& \multicolumn{1}{>{\bfseries}l|}{\begin{tabular}[c]{@{}l@{}}Theoritical Analysis \\\& Modelling\end{tabular}}             &  &  &  &    &   \joinTwoCol{\colorLight} &      &      \\ \hline
+\multicolumn{14}{|c|}{\colorSep}                                                         \\ \hline
+%\multicolumn{1}{|c|}{} 	& \multicolumn{1}{>{\bfseries}l|}{\begin{tabular}[c]{@{}l@{}}Theoritical\\ Analysis \& Modelling\end{tabular}}            &  &  &  &    &                       &  &  &    & \joinTwoCol{\colorObjmillm}        &  &    &  &  \\ \cline{1-10}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{tabular}
+\end{center}
+\end{mytable}
+
+\end{document}
